@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>
+     연산자
+    </title>
+  </head>
+  <body>
+    <script>
+
+      // 연산자(+, -, *, /, %)
+      var result = 2 + 3
+
+      // 대입연산자(+=, -=, *=, /=, %=)
+      var num1 = 1
+      var num2 = 2
+      num1 += num2 // num1 = num1 + num2
+
+      // 복합대입연산자
+      var str = "<table border = '1'>"
+        str += "<tr>"
+          str += "<td>1</td>"
+          str += "<td>2</td>"
+        str += "</tr>"
+      str += "</table>"
+      document.write(str)
+
+      // 증감연산자(++, --)
+      document.write(num1++ +"<br>")
+      document.write(--num2 +"<br>")
+
+      //비교연산자(>, <, >+=, <=, ==, !=, ===, !==)
+      var num3 = 10
+      var num4 = "10"
+
+      document.write((num3==num4) + "<br>")
+      // ==: 표기된 값만 같으면 true
+      document.write((num3!=num4) + "<br>")
+      // !=: 표기된 값이 다르면 true
+      document.write((num3===num4) + "<br>")
+      // ===: 표기된 값과 자료형이 일치해야만 true
+      document.write((num3!==num4) + "<br>")
+      // !==: 표기된 값과 자료형이 달라야만 ture
+            
+      //논리연산자(||, &&, !)
+
+      //삼항연산자
+      document.write(num3==num4?"hello":"world")
+
+      //형변환
+      //parseInt(): 문자열을 숫자(정수형)로 변경
+      //parseFloat(): 문자열을 숫자(실수형)로 변경
+      //Number(): 다른 자료형을 숫자(정수, 실수)로 변경
+      //toString(): 숫자를 문자열로 변경
+      Number("10")
+
+      //변수 2개 선언 ('100', 200), 두 수의 합을 출력
+      const number1 = "100"
+      const number2 = 200
+      const reasult = Number(number1) + number2
+      console.log(`${number1}과 ${number2}의 더한 결과 >>`, reasult) // 내가 한 코드
+
+      console.log("100과 200의 더한 결과 >> " + (Number(number1) + number2)) // 답 코드
+      console.log("100과 200의 더한 결과 >> " + (parseInt(number1) + number2)) // 답 코드
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>
+     var let const
+    </title>
+  </head>
+  <body>
+    <script>
+      //var (변수 재선언 가능, 변수 재할당 가능)
+      var a = 1;
+      var a = 2;  // OK
+
+      var a = 1;
+      a = 2; // OK
+
+      //let (변수 재선언 불가능, 변수 재할당 가능)
+      let a = 1;
+      let a = 2; // error
+
+      let a = 1;
+      a = 2; // OK
+
+      //const (변수 재선언 불가능, 변수 재할당 불가능)
+      const a = 1;
+      const a = 2; //error
+
+      const a = 1;
+      a = 2; //error
+
+      // number = 정수, 실수 등 산술 연산이 가능한 자료형
+      // string = 문자열
+      // boolean = true/false
+      // undefined = 값이 없음(오류)
+      // null = 아무런 값을 나타내지 않을때(의도적으로 빈값을 줌)
+
+      var s;
+      var s1 = "값"
+      s1 = 123;
+      s1 = true
+      s1 = null
+      
+    </script>
+  </body>
+</html>
