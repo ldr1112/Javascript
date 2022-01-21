@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
+    <!-- <head>내에 작성은 단순한 로직 처리(설정값 초기화) -->
+    <!-- 브라우저가 html 문서 해석시 <script> 태그를 만나면 처리가
+    끝날때까지 다른 해석을 멈춤 (속도가 느려짐) -->
+  </head>
+  <body>
+    <!-- <body>내에 작성은 복잡한 로직 처리(제어) -->
+    <!-- html 문서 해석 후 스크립트 실행(속도 빠름) -->
+
+    <!-- 외부 자바스크립트 파일 불러오기 -->
+    <script src="../js_html연결/jsimport.js" charset="utf-8"></script>
+
+    <!-- 인라인: html 태그 내부에 이벤트 속성 삽입 -->
+    <input type="button" onclick="alert('hello world')" value="버튼 클릭!">
+  </body>
+</html>
