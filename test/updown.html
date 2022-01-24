@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>랜덤 숫자 맞추기 프로그램</title>
+  </head>
+  <body>
+    <script>
+
+      let ran = Math.floor(Math.random()*30)
+
+      while(true) {
+        let input = prompt("숫자를 입력하시오!")
+
+        if(input > ran) {
+          alert("입력한 숫자보다 UP!")
+        }
+        else if(input < ran) {
+          alert("입력한 숫자보다 DOWN!")
+        }
+        else {
+          console.log("정답입니다!!!")
+          break
+        }
+      }
+      console.log("정답: " + ran)
+
+    </script>
+  </body>
+</html>
