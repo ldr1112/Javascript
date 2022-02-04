@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>함수1</title>
+  </head>
+  <body>
+  <script>
+    // 전역 변수: 자바스크립트 내에서 어디에서든 사용할 수 있는 변수
+    const num1 = 10
+
+    // 전역 함수: 자바스크립트 내에서 어디에서든 사용할 수 있는 함수
+    function printNum() {
+      // 지역 변수: 함수 내에서만 사용할 수 있는 변수
+      const num1 = 3
+
+      alert(num1) //3
+      // 지역 함수: 함수내에서만 호출 가능한 함수
+      function call() {
+        alert("call!!")
+      }
+    }
+
+    alert(num1) //10
+    printNum()
+    call() // 실행되지 않음 지역함수이기 때문에
+
+  </script>
+  </body>
+</html>

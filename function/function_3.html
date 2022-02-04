@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>함수 배열</title>
+  </head>
+  <body>
+  <script>
+    // 배열선언
+    const arrFruits = ["사과", "포도", "딸기"]
+
+    // 함수선언
+    function countFruits(arrFruits) {
+      let sum = 0;
+      for(let i=0; i<arrFruits.length; i++) {
+        let num = Number(prompt(arrFruits[i] + "의 개수는?"))
+        sum += num
+      }
+      return sum
+    }
+
+    document.write("과일의 총 개수: " + countFruits(arrFruits) + "입니다.")
+
+  </script>
+  </body>
+</html>

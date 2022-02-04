@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>내장 객체_date</title>
+  </head>
+  <body>
+  <button onclick="getTime()">현재 시각은?</button>
+  <script>
+    function getTime() {
+      const time = new Date()
+      const hour = time.getHours()
+      const min = time.getMinutes()
+      const sec = time.getSeconds()
+
+      document.write(hour+":"+min+":"+sec)
+    }
+  </script>
+  </body>
+</html>

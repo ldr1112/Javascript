@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>함수 배열 응용</title>
+  </head>
+  <body>
+  <script>
+    // 배열선언
+    const sub = ["java", "python"]
+
+    // 함수선언
+    function avg(sub) {
+      let sum = 0;
+      for(let i=0; i<sub.length; i++) {
+        sum += Number(prompt(sub[i] + "의 점수는?"))
+      }
+      return sum/sub.length
+    }
+
+    document.write("평균 점수는: " + avg(sub) + "점 입니다.")
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>객체</title>
+  </head>
+  <body>
+  <script>
+    // 생성 함수
+    function person(name, age){
+      this.name = name
+      this.age = age
+
+      // 지역 함수
+      function printInfo() {
+        alert(name + ", " + age)
+      }
+
+      this.printInfo2 = function() {
+        alert(name + ", " + age)
+      }
+      // printInfo()
+    }
+
+    const p = new person("이동현", 32)
+    p.printInfo2()
+
+  </script>
+  </body>
+</html>
