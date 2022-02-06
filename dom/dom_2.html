@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>문서 객체 모델_2 (숫자 증감)</title>
+  </head>
+  <body>
+    <p id = "num">0</p>
+    <button onclick="addNumber()">증가</button>
+    <button onclick="minNumber()">감소</button>
+    <script>
+      const p_tag = document.getElementById('num')
+
+      // 숫자 증가 함수
+      function addNumber() {
+        // innerHTML 속성으로 값을 접근하면 문자열로 변환
+        // 연산을 하기위해서는 숫자형 변환이 필요(Number 또는 parseInt로 묶어주기)
+        p_tag.innerHTML = Number(p_tag.innerHTML) + 1
+      }
+
+      // 숫자 감소 함수
+      // 단, 음수가 되지 않도록 조건 추가
+      // 비교 연산자(<, >, =)를 사용하면 자동으로 숫자형으로 변환(p_tag.innerHTML를 사용해도 무관)
+      function minNumber() {
+        if(Number(p_tag.innerHTML) > 0) {
+          p_tag.innerHTML = Number(p_tag.innerHTML) - 1
+        }
+      }
+    </script>
+    
+  </body>
+</html>

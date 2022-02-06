@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>문서 객체 모델</title>
+  </head>
+  <body>
+    <p id = "name">이동현</p>
+    <input type = "text" id = "input_name">
+    <button onclick="change()">바꾸기</button>
+    <script>
+      // 특정 id가 지정된 요소에 접근
+      const name = document.getElementById('name')
+      
+      console.log(name)
+      console.log(name.innerText) // 태그 사이(<p id = "name">이동현</p>) 텍스트를 가지고 올려면 innerText
+
+      name.innerText = "이동령"
+
+      function change() {
+        let input = document.getElementById('input_name').value  // iput창(<input type = "text" id = "input_name">)에서 가지고 올려면 value
+        name.innerText = input
+      }
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>랜덤 숫자 맞추기 프로그램</title>
+    <style>
+      .success {
+        background-color: aquamarine;
+        color: white;
+      }
+      .fail {
+        background-color: chartreuse;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>램덤 숫자 맞추기 프로그램</h1>
+    <p>1~100까지의 숫자 둥에서 하나의 숫자를 뽑았습니다.
+      당신이 추측할 수 있는 기회는 10번입니다.
+      추측한 숫자가 높다거나 낮다는 표시는 아래에서 표시됩니다.
+    </p>
+
+    <from action = "" onsubmit = "return false">
+      <input type = "text" id = "answer">
+      <input type = "button" id = "btn" value = "추측" onclick="check()">
+    </from>
+
+    <p id = "before_result">이전 결과: </p>
+    <p id = "result"></p>
+
+    <script>
+      const body = document.querySelector('body')
+      const answer = document.getElementById('answer')
+      const btn = document.getElementById('btn')
+      const before_result = document.getElementById('before_result')
+      const result = document.getElementById('result')
+
+      let ran = parseInt(Math.random() * 100) + 1
+      let cnt = 1
+      console.log(ran)
+
+      // 마우스로 추측을 누를 필요없이 엔터 사용
+      body.addEventListener('keypress', function(event) {
+
+        if(event.keyCode === 13) {
+          console.log('엔터')
+          check()
+        }
+      })
+
+      function check() {
+        if(cnt == 10) {
+          result.innerHTML = '<span class = "success">틀렸습니다</span>'
+          btn.disabled = true
+        } else {
+
+          let num = parseInt(answer.value)
+
+          if(ran === num) {
+            result.innerHTML = '<span class = "success">정답입니다</span>'
+            btn.disabled = true
+          } else if(ran > num) {
+            result.innerHTML = '<span class = "fail">UP!</span>'
+            before_result.innerHTML += num + ", "
+          } else {
+            result.innerHTML = '<span class = "fail">DOWN!</span>'
+            before_result.innerHTML += num + ", "
+          }
+
+          cnt += 1
+        }
+
+        answer.value = ''  // 전에 썻던 값이 없어짐
+        answer.focus()  // 입력하고 난 후 입력창에 바로 다시 입력 가능
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>jquery 버튼 이벤트</title>
+  </head>
+  <body>
+    <h1>jquery 다루기</h1>
+    <button>버튼 클릭!</button>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+      $('button').on('click', function() {
+        $('h1').html("변경성공!")
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>jquery 스타일 속성</title>
+  </head>
+  <body>
+    <h1>jquery 다루기</h1>
+
+    <!-- 다운로드 받지 않아도 사용할 수 있는 방법 -->
+    <script src="http://code.jquery.com/jquery-Latest.min.js"></script>
+
+    <!-- 다운로드 받은 jquery lib -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+      // js 
+      // innerHTML은 <font>jquery 다루기</font>까지 가져옴
+      const h1 = document.querySelector('h1').innerHTML
+      // innerText는 jquery 다루기 TEXT만 가져옴
+      const h2 = document.querySelector('h1').innerText
+
+      console.log(h1)
+      console.log(h2)
+      
+      // jquery $('요소명 또는 선택자(#h1)')
+      // .html() : 선택한 요소 안의 내용을 가져오거나 다른 내용으로 바꿈
+      let h3 = $('h1').html()
+      console.log(h3)
+
+      // 텍스트 바꾸기
+      $('h1').html("텍스트 변경성공")
+
+      // 스타일 변경1 (각각 변경)
+      $('h1').css('color', 'tomato')
+      $('h1').css('font-size', '50px')
+
+      // 스타일 변경2 (한번에 변경)
+      $('h1').css('color', 'pink').css('font-size', '80px')
+
+      // 스타일 변경3 (여러개 속성 변경)
+      $('h1').css({
+        'color': 'green',
+        'font-size': '100px',
+        'background-color': 'red'
+      })
+    </script>
+  </body>
+</html>
