@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="EUC-KR">
+    <title>jquery 버튼 이벤트_2</title>
+  </head>
+  <body>
+    
+    <img src = "./img/1.jpg" width = "200px" height="160px" id = "pic">
+    <img src = "./img/2.jpg" width = "200px" height="160px" id = "pic1"
+    style = "display: none;">
+
+    <button id = "b1">이미지 변경</button>
+    <button id = "b2">이미지 추가</button>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+      $('#b1').on('click', function() {
+        $('#pic').attr('src', './img/2.jpg')
+      })
+
+      $('#b2').on('click', function() {
+        $('#pic1').css('display', 'inline')
+        //after 특정 태그 뒤에 추가 앞에추가는 before()
+        $('#pic').after('<img src = "./img/2.jpg" width = "200px" height="160px" id = "pic3">')
+      })
+    </script>
+  </body>
+</html>

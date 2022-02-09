@@ -8,8 +8,16 @@
     <button>버튼 클릭!</button>
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script>
+
+      let sw = false
       $('button').on('click', function() {
-        $('h1').html("변경성공!")
+        if(sw == false) {
+          $('h1').html("변경성공!")
+          sw = true
+        } else {
+          $('h1').html("jquery 다루기!")
+          sw = false
+        }
       })
     </script>
   </body>
